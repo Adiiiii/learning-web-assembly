@@ -17,7 +17,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// {{PRE_JSES}}
+
 
 // Sometimes an existing Module object exists with properties
 // meant to overwrite the default module functionality. Here
@@ -2179,3 +2179,4 @@ run();
 
 
 
+console.dir('I am suppposed to run after the main wasm module');

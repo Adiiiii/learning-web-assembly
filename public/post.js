@@ -1,0 +1,1 @@
+console.dir('I am suppposed to run after the main wasm module');
