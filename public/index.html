@@ -6,25 +6,7 @@
   </head>
   <body>
     <h1>WebAssembly Demo</h1>
-    <script>
-
-      const consoleLogHelper = (offset, length, num) => {
-        let stringMessage = new Uint8Array(wasm.instance.exports.memory.buffer, offset, length);
-        console.log(stringMessage,num);
-      }
-      // WebAssembly
-      const imports = {
-        env :{
-          numLog : console.log,
-          stringLog: consoleLogHelper
-        }
-      }
-      WebAssembly.instantiateStreaming(fetch('/program.wasm'), imports)
-      .then((wasm) => {
-        console.log('wasm is working', {wasm});
-        window.wasm = wasm;
-      }
-      )
+    <script src="demo.js">
     </script>
   </body>
 </html>
